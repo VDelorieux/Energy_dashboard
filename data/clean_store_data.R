@@ -40,39 +40,13 @@ saveRDS(df, "data/001_global_primary_energy.RDS")
 
 cbPalette <- rev(c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#336600", "#6600FF"))
 
-#Absolute consumption en TWh
-ggplot(data = df)+
-  geom_area(mapping = aes(x = Year, y = consumption, fill = source), alpha = 0.75)+
-  labs(y="TWh", x = "", fill ="")+
-  theme_bw()+
-  scale_x_continuous(breaks = c(1800, 1850, 1900, 1950,2000, 2019))+
-  scale_y_continuous(breaks = c(0, 25000, 50000, 75000, 100000, 125000, 150000),
-                     labels = c("0", "25,000", "50,000", "75,000", "100,000", "125,000", "150,000"))+
-  scale_fill_manual(values=cbPalette)
-
-
-#Relative consumption 
 
 
 
-ggplot(data = df)+
-  geom_area(mapping = aes(x = Year, y = cons_relative, fill = source), alpha = 0.65)+
-  labs(y="", x = "", fill ="")+
-  theme_bw()+
-  scale_x_continuous(breaks = c(1800, 1850, 1900, 1950,2000, 2019))+
-  scale_y_continuous(breaks = c(0, 20, 40, 60, 80, 100),
-                     labels = c("0%", "20%", "40%", "60%", "80%", "100%"))+
-  scale_fill_manual(values=cbPalette)
 
-# Consumption per capita en MWh
 
-ggplot(data = df)+
-  geom_area(mapping = aes(x = Year, y = cons_per_capita, fill = source), alpha = 0.75)+
-  labs(y="MWh", x = "", fill ="")+
-  theme_bw()+
-  scale_x_continuous(breaks = c(1800, 1850, 1900, 1950,2000, 2019))+
-  #scale_y_continuous(breaks = c(0, 25000, 50000, 75000, 100000, 125000, 150000),
-  #                   labels = c("0", "25,000", "50,000", "75,000", "100,000", "125,000", "150,000"))+
-  scale_fill_manual(values=cbPalette)
+
+
+
 
   
